@@ -64,3 +64,22 @@ After which we collect the words used to describe positive and negative reviews
 ### TFIDF weighted W2v
 
 
+|   Vector type  | KNN TA | KNN TE | KNN TeA | KNN TeE | KD TA  | KD TE  | KD TeA | KD TeE |
+|--|--|--|--|--|--|--|--|--|
+|    Bow    |  80%   |  20%   |  61.50% |  39.50% | 82.22% | 17.78% | 65.16% | 35.84% |
+|   TFIDF  | 76.92% | 23.07% |  74.00% |  26.00% | 79.28% | 20.71% | 76.50% | 23.50% |
+|  AvgW2V  | 60.92% | 39.07% |  58.33% |  41.67% | 65.00% | 35.00% | 53.00% | 47.00% |
+| TFIDFW2V | 59.50% | 40.50% |  61.16% |  38.84% | 59.78% | 40.21% | 60.50% | 39.50% |
+
+TA:  Train Accuracy
+TE:  Train Error
+TeA: Test Accuracy
+TeE: Test Accuracy
+
+#### BoW: for both Brute Force and KD Tree error increased with increase in k, optimal K is found out to be 3
+#### TF-IFD unlike BoW, here error decreases with increase in k optimal k for Brute Force is 49 and for KD Tree is 37
+#### Avg W2V: in this case both test and train error tend to stabiles after 20~30 Optimal k for Brute Force 33 and KD tree 21
+#### Apart from the above case TF-IDF has fluctuating error where error increases >5 and <20 and increases after k >30
+#### It if found out to be BoW with kd tree has the maximum accuracy
+
+
